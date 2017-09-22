@@ -1,28 +1,25 @@
 package milestone1;
 
 public class Postings {
-	private Object docID;
-	private Object position;
+	private int docID;
+	private int position;
 	
 	public Postings(){
-		docID = null;
-		position = null;
+		docID = 0;
+		position = 0;
 	}
 	public Postings(int doc_id, int pos){
 		docID = doc_id;
 		position= pos;
 	}
-	public Object getDocID() {
+	public Postings(int pos){
+		position = pos;
+	}
+	public int getDocID() {
 		return docID;
 	}
-	public void setDocID(Object docID) {
-		this.docID = docID;
-	}
-	public Object getPosition() {
+	public int getPosition() {
 		return position;
-	}
-	public void setPosition(Object position) {
-		this.position = position;
 	}
 	
 }
