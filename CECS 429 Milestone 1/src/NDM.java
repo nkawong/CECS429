@@ -98,8 +98,11 @@ public class NDM {
 		}
 		System.out.println("Enter a word you would like to search for");
 		choice = input.nextLine();
-		
-		printIndex(choice, aPosting, fileNames);
+		while(!choice.equals(":q")){
+			printIndex(choice, aPosting, fileNames);
+			System.out.println("Enter a word you would like to search for");
+			choice = input.nextLine();
+		}
 		
 		/*System.out.println("Enter a word you would like to search for");
 		choice = input.nextLine();
@@ -151,12 +154,12 @@ public class NDM {
 		if((index.getMap().containsKey(choice))){
 			System.out.print(choice + ": ");
 			for (int t = 0; t < index.getPostings(choice).size(); t++){
-				System.out.println(index.getPostings(choice).get(t).getDocID());
-				//System.out.println(fileNames.get(t));
+				System.out.print(fileNames.get(index.getPostings(choice).get(t).getDocID()) + " ");
 			}
 			//nSystem.out.print(fileNames.get(index.getMap().get(choice)) + " ");
 			//System.out.println(index.getMap().get(choice).toString());
 		}
+		System.out.println();
 		/*
 		for(int i = 0; i < dict.length; i++){
 			if(dict[i].equalsIgnoreCase(choice)){ 
