@@ -50,7 +50,7 @@ public class PositionalPosting {
 
 				posting_list.get(posting_list.size() -1).addPosition(position);
 				// System.out.println(posting_list.size());
-				System.out.println(term + " " + posting_list.get(posting_list.size() -1).getDocID());
+				//System.out.println(term + " " + posting_list.get(posting_list.size() -1).getDocID());
 
 			}
 			else{
